@@ -3,6 +3,15 @@
 ## Introduction
 Health checks can be used to monitor the health of your websites, APIs, and other services.
 
+## Installation
+Install the following packages:
+    
+```bash
+sudo apt install mailutils -y
+```
+Select `Internet Site` and press `Enter`.
+
+
 ## Get started
 
 Write a bash script that checks the health of your service. For example, you can use `curl` to check if your website is up:
