@@ -124,6 +124,10 @@ You can then test the port connection with the following command:
 nc -zv <current server ip address> 27017
 ```
 
+To add your IP to the firewall:
+```bash
+sudo ufw allow from x.x.x.x to any port 27017 comment "John Doe - Appartment"
+```
 
 # Adding & Managing a Project
 
@@ -207,10 +211,6 @@ net:
   bindIp: 127.0.0.1,<your_server_ip>
 ```
 
-To add your IP to the firewall:
-```bash
-sudo ufw allow from x.x.x.x to any port 27017 comment "John Doe - Appartment"
-```
 
 ### Database Backup
 _TODO: verify if that backup is complete and can be restored._
