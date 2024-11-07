@@ -227,6 +227,12 @@ To add a new project, you need to create a new configuration file in the `/etc/n
 
 For instance, to add the project `mywebsite.com`, you can create a file named `mywebsite.com` with the following content:
 ```nginx
+
+server {
+    server_name www.mywebsite.com;
+    rewrite ^/(.*)$ https://mywebsite.com/$1 permanent;
+}
+
 server {
     listen 80;
     server_name mywebsite.com www.mywebsite.com;
