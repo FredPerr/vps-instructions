@@ -192,9 +192,7 @@ Save those credentials in a safe place.
 To create a new database and user for a project, you can use the following commands:
 ```bash
 mongosh
-use admin
-db.auth("<adminUser>", "<password>")
-db.createUser({user: "<project_name>", pwd: "<password>", roles: ["dbOwner"], db: "databaseName"})
+db.createUser({user: "<project_name>", pwd: "<password>", roles: ["dbOwner"]})
 ```
 
 You can then use a connection string to connect to the database:
